@@ -1,0 +1,16 @@
+.user-intro-card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  text-align: center;
+}
+
+.user-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.username {
+  margin-top: 8px;
+}

@@ -1,0 +1,111 @@
+.payment-container {
+  font-family: 'Arial, sans-serif';
+  margin: 0 auto;
+  min-height: 100vh; /* Ensure the container takes at least the full viewport height */
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+}
+
+.payment-header {
+  text-align: center;
+  margin-bottom: 20px;
+  
+}
+
+.payment-highlight {
+  color: #6064b6;
+}
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: large;
+  background-color: white;
+}
+
+.payment-label {
+  display: flex;
+  align-items: right;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  width: 100%; /* Make sure payment options take the full width */
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+  max-width: 400px; 
+}
+
+.payment-info {
+  display: flex;
+  align-items: center;
+}
+
+.payment-info img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+/* Ensure the footer stays at the bottom */
+footer {
+  margin-top: auto;
+}
+
+/* Add some styles to the footer if needed */
+footer {
+  background-color: #f4f4f4;
+  padding: 10px;
+  text-align: center;
+}
+.next-button {
+  margin-top: 20px;
+  padding: 8px;
+  width: 100px;
+  background-color: #6064b6;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  size:20px ;
+  align-self: center;
+}
+
+.next-button:disabled {
+  background-color: #6064b6;
+  cursor: not-allowed;
+}
+/* Add this to your existing PaymentForm.css file */
+
+.cancel {
+  
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.cancel a {
+  text-decoration: none;
+  padding: 8px;
+  width: 100px;
+  background-color: #6064b6;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.cancel a:hover {
+  background-color: #e88d1f;
+}
+
+.next-button a:hover {
+  background-color: #e88d1f;
+}

@@ -1,0 +1,32 @@
+.course-form-container {
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 4px;
+}
+
+input,
+textarea {
+  margin-bottom: 12px;
+  padding: 8px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
