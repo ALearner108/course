@@ -7,9 +7,7 @@ import { useCartContext } from "../context/cart_context";
 import { useSelector } from "react-redux";
 import SearchComponent from "./SearchComponent";
 import courses from "../utils/data";
-import { useState } from "react";
-import { auth } from "../Firebase-config";
-import { useEffect } from "react";
+
 import { useContext } from "react";
 import { AuthContext } from "../pages/Authcontex";
 const Navbar = () => {

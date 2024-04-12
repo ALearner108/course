@@ -16,27 +16,7 @@ function LiveClass() {
     }, 3000);
   };
 
-  const courses = [
-    {
-      id: 1,
-      title: "Course 1",
-      author: "Author 1",
-      description: "Description for Course 1.",
-      time: "January 1, 2023, 10:00 AM",
-      duration: "2 hours",
-      participants: 50,
-    },
-    {
-      id: 2,
-      title: "Course 2",
-      author: "Author 2",
-      description: "Description for Course 2.",
-      time: "January 2, 2023, 2:00 PM",
-      duration: "1.5 hours",
-      participants: 30,
-    },
-    // Add more courses as needed
-  ];
+
   const message = "class is not started yet";
   return (
     <div>

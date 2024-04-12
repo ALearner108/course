@@ -4,9 +4,8 @@ import { MdClose } from "react-icons/md";
 import { Link, useNavigate } from "react-router-dom";
 import { useSidebarContext } from "../context/sidebar_context";
 import { useCoursesContext } from "../context/courses_context";
-import { useSelector } from "react-redux";
-import { auth } from "../Firebase-config";
-import { useState,useEffect } from "react";
+
+
 import { useContext } from "react";
 import { AuthContext } from "../pages/Authcontex";
 const Sidebar = () => {
@@ -14,7 +13,7 @@ const Sidebar = () => {
   const { currentUser, logout } = user;
 
  
-  const userName = useSelector((state) => state.account.username);
+  
   const { categories } = useCoursesContext();
   const nav = useNavigate();
   const { closeSidebar, isSidebarOpen } = useSidebarContext();
