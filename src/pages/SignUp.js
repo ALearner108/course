@@ -1,29 +1,20 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable react-hooks/rules-of-hooks */
 import React, { useContext, useState } from "react";
-
 import { useNavigate } from "react-router-dom";
-
 import "./Signup.css"; // Import CSS file for styling
 import { AuthContext } from "./Authcontex";
 
 export default function Signup() {
   const navigate = useNavigate();
-  const [email, getEmail] = useState("");
-  const [password, getPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const signupContext = useContext(AuthContext);
-
   const { signup, currentUser } = signupContext;
-  async function handleclick(e) {
+
+  async function handleClick(e) {
     e.preventDefault();
-    if (!email && !password)
-    {
-      alert("Enter Email and password");
-    
-    }
-    if (!email && password || email && !password)
-    {
-      alert("Fields cannot be empty");
+    if (!email || !password) {
+      alert("Email and password cannot be empty");
+      return;
     }
 
     try {
@@ -31,13 +22,15 @@ export default function Signup() {
       if (currentUser) {
         navigate("/");
       }
-    } catch (e) {
-      console.log(e);
+    } catch (error) {
+      console.log(error);
     }
   }
-  function gotologin() {
+
+  function goToLogin() {
     navigate("/login");
   }
+
   return (
     <div className="signup-container">
       <h2>Sign Up</h2>
@@ -46,7 +39,7 @@ export default function Signup() {
           <label htmlFor="email">Email:</label>
           <input
             value={email}
-            onChange={(e) => getEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
             type="email"
             id="email"
             name="email"
@@ -57,19 +50,20 @@ export default function Signup() {
           <label htmlFor="password">Password:</label>
           <input
             value={password}
-            onChange={(e) => getPassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
             type="password"
             id="password"
             name="password"
             placeholder="Enter your password"
           />
         </div>
-        <button onClick={handleclick} type="submit" className="signup-btn">
+        <button onClick={handleClick} type="submit" className="signup-btn">
           Sign Up
         </button>
       </form>
       <p className="already-have-account">
-        Already have an account? <a onClick={gotologin}>Log in</a>
+        Already have an account?{" "}
+        <button onClick={goToLogin}>Log in</button>
       </p>
     </div>
   );

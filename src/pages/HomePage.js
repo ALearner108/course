@@ -5,7 +5,7 @@ import CategoriesList from "../components/CategoriesList";
 import Footer from "../components/Footer";
 import LiveSection from "../components/live";
 
-import { useSelector } from "react-redux";
+
 
 import { AuthContext } from "./Authcontex";
 import { useContext } from "react";
@@ -22,7 +22,6 @@ const HomePage = () => {
   //   return unsubscribe
   // }, [])
  
-  const userName = useSelector((state) => state.account.username);
   return (
     <div className="holder">
       <Hero />
