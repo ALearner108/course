@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Footer from '../components/Footer';
 import { Cancel } from '../actions';
 
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import './Paymentform.css'; // Import the CSS file for styles
 

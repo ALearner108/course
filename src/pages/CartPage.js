@@ -1,12 +1,11 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useCartContext } from "../context/cart_context";
 import styled from "styled-components";
 import CartItem from "../components/CartItem";
 import { MdClear } from "react-icons/md";
 import CategoriesList from "../components/CategoriesList";
-import PaymentForm from "./payment";
-import { CHECK_OUT } from "../actions";
+
 
 const CartPage = () => {
   function checkOut() {}
@@ -20,7 +19,7 @@ const CartPage = () => {
   if (cartItems.length < 1) {
     return (
       <NotFoundWrapper>
-        <div className="container">No items found in the cart.</div>
+        <div className="container">Add items and check again.</div>
       </NotFoundWrapper>
     );
   }
@@ -40,7 +39,7 @@ const CartPage = () => {
               </div>
               <button
                 type="button"
-                className="cart-clear-btn flex fs-15 fw-6 text"
+                className="cart-clear-btn "
                 onClick={() => clearCart()}
               >
                 <MdClear className="text-pink" />
@@ -65,7 +64,7 @@ const CartPage = () => {
               <Link to={"/Checkout"}
                 onClick={checkOut}
                 type="button"
-                className="checkout-btn bg-purple text-white fw-6"
+                className="checkout"
                 
               >
                 Checkout
@@ -97,9 +96,14 @@ const CartWrapper = styled.div`
     }
 
     .cart-clear-btn {
+      color: white !important;
       span {
         margin-left: 6px;
       }
+    }
+    .cart-clear-btn:hover{
+      background-color: blue;
+      color:white;
     }
 
     .cart-items-list {
@@ -109,18 +113,23 @@ const CartWrapper = styled.div`
     .cart-total-value {
       font-size: 34px;
     }
-    .checkout-btn {
-      padding: 14px 28px;
-      letter-spacing: 1px;
-      margin-top: 12px;
-      transition: var(--transition);
-
-      &:hover {
-        background-color: var(--clr-dark);
-      }
-    }
+    
     .cart-total {
       padding-bottom: 50px;
+    }
+    .checkout{
+      border: 2px solid black;
+      background-color: green;
+      width:4%;
+      color:white;
+      font-size:larger;
+      padding:10px;
+      margin-top: 20px;
+      
+
+    }
+    .checkout:hover{
+      background-color: blue;
     }
 
     @media screen and (min-width: 992px) {

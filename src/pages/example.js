@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 
 const FirebaseDataFetcher = () => {
-  const [data, setData] = useState({});
+  
   useEffect(() => {
     async function fetchData() {
       const res = await fetch(

@@ -2,16 +2,11 @@
 // Login.js
 import React, { useContext, useState } from "react";
 
-import { useDispatch } from "react-redux";
-import { updateName, updatePassword } from "../reducers/accounslice";
+
 import { useNavigate } from "react-router-dom";
-import {
-  createUserWithEmailAndPassword,
-  onAuthStateChanged,
-  signInWithEmailAndPassword,
-} from "firebase/auth";
-import { auth } from "../Firebase-config";
-import { useSelector } from "react-redux";
+
+
+
 import { AuthContext } from "./Authcontex";
 const Login = () => {
   const navigate = useNavigate();

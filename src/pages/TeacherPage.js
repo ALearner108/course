@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../Teacher.css";
-import { json, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 const CourseForm = () => {
   const userName = useSelector((state) => state.account.username);

@@ -4,10 +4,9 @@ import CoursesList from "../components/CourseList";
 import CategoriesList from "../components/CategoriesList";
 import Footer from "../components/Footer";
 import LiveSection from "../components/live";
-import { useEffect } from "react";
+
 import { useSelector } from "react-redux";
-import { auth } from "../Firebase-config";
-import { useState } from "react";
+
 import { AuthContext } from "./Authcontex";
 import { useContext } from "react";
 const HomePage = () => {
