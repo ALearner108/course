@@ -22,7 +22,7 @@ const Login = () => {
       alert("Enter Email and password");
     
     }
-    if (!email && password || email && !password)
+    if ((!email && password) || (email && !password))
     {
       alert("Fields cannot be empty");
     }

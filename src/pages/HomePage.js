@@ -11,7 +11,7 @@ import { AuthContext } from "./Authcontex";
 import { useContext } from "react";
 const HomePage = () => {
   const user = useContext(AuthContext);
-  const { currentUser, logout } = user;
+  const { currentUser } = user;
   // const [currentUser, setCurrentUser] = useState()
   // useEffect(() => {
   //   const unsubscribe = auth.onAuthStateChanged(user => {
